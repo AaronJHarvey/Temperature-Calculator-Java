@@ -2,9 +2,13 @@ import java.util.Scanner;
 
 public class TemperatureCalculator {
     public static void main(String[] args) {
-        private double cTemp;
-        private int fTemp;
-        
+        double cTemp;
+        int fTemp;
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please Choose Your Conversion:\n Input 1 for Fahrenheit(F) to Celsius(C)\n Input 2 for Celsius(C) to Fahrenheit(F)\n");
+        scan.close();
+
     }
 }
 
