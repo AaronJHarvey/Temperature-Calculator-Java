@@ -4,10 +4,31 @@ public class TemperatureCalculator {
     public static void main(String[] args) {
         double cTemp;
         int fTemp;
+        int choice;
+        int x=1;
 
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Please Choose Your Conversion:\n Input 1 for Fahrenheit(F) to Celsius(C)\n Input 2 for Celsius(C) to Fahrenheit(F)\n");
-        scan.close();
+        do {
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Please Choose Your Conversion:\n Input 1 for Fahrenheit(F) to Celsius(C)\n Input 2 for Celsius(C) to Fahrenheit(F)\n");
+            choice = scan.nextInt();
+
+        
+        switch (choice) {
+            case 1:
+                System.out.print("You have selected: FAHRENHEIT TO CELSIUS\n");
+                x=0;
+                break;
+            case 2:
+                System.out.print("You have selected: CELSIUS TO FAHRENHEIT\n");
+                x=0;
+                break;
+            default:
+                System.out.print("Invalid selection, Please try again \n\n");
+                break;
+        }
+
+    } while (x != 0);
+        
 
     }
 }
