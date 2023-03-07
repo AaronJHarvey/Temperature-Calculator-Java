@@ -1,9 +1,11 @@
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class TemperatureCalculator {
     public static void main(String[] args) {
+        DecimalFormat df = new DecimalFormat("#.00");
         double cTemp;
-        int fTemp;
+        double fTemp;
         int choice;
         int x=1;
 
@@ -16,6 +18,10 @@ public class TemperatureCalculator {
         switch (choice) {
             case 1:
                 System.out.print("You have selected: FAHRENHEIT TO CELSIUS\n");
+                System.out.print("Please input the Fahrenheit temperature you wish to convert:");
+                fTemp = scan.nextInt();
+                cTemp = (fTemp - 32) * 5/9;
+                System.out.print("\n" + fTemp + " degrees Fahreheit is " + df.format(cTemp) + " degrees Celsius\n\n");
                 x=0;
                 break;
             case 2:
@@ -29,6 +35,7 @@ public class TemperatureCalculator {
 
     } while (x != 0);
         
+        // System.out.print("Please input your temperature you wish to convert. ")
 
     }
 }
