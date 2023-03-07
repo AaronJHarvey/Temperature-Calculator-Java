@@ -18,7 +18,7 @@ public class TemperatureCalculator {
         switch (choice) {
             case 1:
                 System.out.print("You have selected: FAHRENHEIT TO CELSIUS\n");
-                System.out.print("Please input the Fahrenheit temperature you wish to convert:");
+                System.out.print("Please input the Fahrenheit temperature you wish to convert: ");
                 fTemp = scan.nextInt();
                 cTemp = (fTemp - 32) * 5/9;
                 System.out.print("\n" + fTemp + " degrees Fahreheit is " + df.format(cTemp) + " degrees Celsius\n\n");
@@ -26,6 +26,10 @@ public class TemperatureCalculator {
                 break;
             case 2:
                 System.out.print("You have selected: CELSIUS TO FAHRENHEIT\n");
+                System.out.print("Please input the Celsius temperature that you wish to convert: ");
+                cTemp = scan.nextInt();
+                fTemp = (cTemp * 1.8) + 32; 
+                System.out.print("\n" + cTemp + " degrees Celsius is " + Math.round(fTemp) + " degrees Fahrenheit\n\n");
                 x=0;
                 break;
             default:
@@ -41,11 +45,7 @@ public class TemperatureCalculator {
 }
 
 
-// F to C Formula: 
-    // (Ftemp - 32) * (5/9)
 
-// C to F Formula:
-    //  (Ctemp * 1.8) + 32
 
 
 
